@@ -35,12 +35,12 @@ Após isso abra seu navegador e acesse localhost:8080/index e escolha um dos usu
 
 **Usuarios do Sistema**
 - Usuario Normal
-login: user
-senha: user
+- login: user
+- senha: user
 
 - Usuario Administrador
-login: admin
-login: admin
+- login: admin
+- login: admin
 
 ***
 
