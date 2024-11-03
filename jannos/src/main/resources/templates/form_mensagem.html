@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragmentos :: cabecalho('Enviar Mensagem - Kafka')}" />
+<body>
+
+	<div class="container">
+
+		<div>
+			<h1>
+				<b>Enviar Mensagem via Kafka</b>
+			</h1>
+		</div>
+
+		<div>
+			<form th:action="@{/enviar_mensagem}" method="post">
+				Mensagem: <input class="form-control" type="text" name="mensagem"
+					id="mensagem"><br>
+					<p th:text="${var}" style="color: green;"></p><br>
+				<button type="submit">Enviar Mensagem</button>
+			</form>
+		</div>
+
+
+	</div>
+
+</body>
+</html>

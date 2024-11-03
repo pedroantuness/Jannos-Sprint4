@@ -1,0 +1,39 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragmentos :: cabecalho(#{titulo_index_nota})}" />
+  <body>
+    <div class="container">
+        <div class="row">
+            <h1 th:text="#{titulo_index_nota}">Lista De Notas</h1>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col" th:text="#{nota}">Nota</th>
+                            <th scope="col" th:text="#{descricao}">Descricao</th>
+                            <th scope="col">#</th>
+                            <th scope="col">#</th>
+                            <th scope="col">#</th>
+                        </tr>
+                      </thead>
+                    <tbody>
+                        <tr th:each="nota : ${notas}">
+                            <th class="col-3" scope="row" th:text="${nota.valor}">A</th>
+                            <td class="col-3" th:text="${nota.descricao}">B</td>
+							<td class="col-3"><a th:href="@{/detalhes_nota/{idNota}(idNota = ${nota.id})}" th:text="#{detalhes}">Detalhes</a></td>
+							<td class="col-3"><a th:href="@{/atualiza_nota/{idNota}(idNota = ${nota.id})}" th:text="#{atualizar}">Atualizar</a></td>
+							<td class="col-3"><a th:href="@{/remover_nota/{idNota}(idNota = ${nota.id})}" th:text="#{remover}">Remover</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <a href="/cadastro_nota" th:text="#{cad_nova_nota}">Cadastrar nova nota</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragmentos :: cabecalho(#{titulo_index_inicial})}" />
+<body>
+	
+	<div th:replace="~{fragmentos :: botao-logout}" />
+  	<div class="container">
+		
+		<div style="display: flex; align-items: center;">
+			<h1><span th:text="#{index_ola}">Olá, seja bem vindo!</span></h1>
+		</div>
+		<div class="row">
+			<div th:replace="~{fragmentos :: mudar_lingua(#{endpoint_pag_inicial})}" />
+		</div>
+		
+    	<h1 class="text-center mb-4" th:text="#{index_endpoints}">API Endpoints</h1>
+    	<div class="list-group">
+      		<a href="http://localhost:8080/enderecos" class="list-group-item list-group-item-action" th:text="#{index_endereco}">Endereços</a>
+      		<a href="http://localhost:8080/notas" class="list-group-item list-group-item-action" th:text="#{index_nota}">Notas</a>
+      		<a href="http://localhost:8080/produtos" class="list-group-item list-group-item-action" th:text="#{index_produto}">Produtos</a>
+			<a href="http://localhost:8080/novo_usuario" class="list-group-item list-group-item-action" th:text="#{index_novo_usuario}">Casdastar novo Usuario</a>
+			<a href="http://localhost:8080/form_mensagem" class="list-group-item list-group-item-action" th:text="#{index_kafka}">Enviar mensagem via Kafka</a>
+			<a href="http://localhost:8080/form_chat_gpt" class="list-group-item list-group-item-action" th:text="#{index_gpt}">Enviar pergunta ao chatGPT</a>
+			<a href="http://localhost:8080/actuator" class="list-group-item list-group-item-action" th:text="#{index_actuator}">Spring Boot Actuator</a>
+    	</div>
+  	</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
