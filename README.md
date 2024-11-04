@@ -40,7 +40,7 @@ Após isso abra seu navegador e acesse localhost:8080/index e escolha um dos usu
 
 - Usuario Administrador
 - login: admin
-- login: admin
+- senha: admin
 
 ***
 
