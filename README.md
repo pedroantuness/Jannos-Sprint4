@@ -46,7 +46,7 @@ Após isso abra seu navegador e acesse localhost:8080/index e escolha um dos usu
 
 **Link para o video:**
 
-    https://www.youtube.com/watch?v=H-kqcoi-H0I
+    https://www.youtube.com/watch?v=tmXTYCHo9Jg
 
 ***
 
